@@ -14,11 +14,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    padding: 50px;
+    padding: 80px;
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     background-color: #0B132B;
-    color: white;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
   }
 `;
 

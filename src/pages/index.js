@@ -1,8 +1,9 @@
 import React from 'react';
+import MainPage from './main';
 
 const IndexPage = () => (
   <>
-    <h1>Hello</h1>
+    <MainPage />
   </>
 );
 

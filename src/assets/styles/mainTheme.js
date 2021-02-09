@@ -10,7 +10,7 @@ const theme = {
     xxl: '100px',
     xl: '50px',
     l: '40px',
-    m: '20px',
+    m: '28px',
   },
 };
 

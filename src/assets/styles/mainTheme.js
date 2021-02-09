@@ -1,0 +1,15 @@
+const theme = {
+  white: '#FFFFFF',
+  red: '#FF5A6F',
+  lightBlue: '#1C2541',
+  turquoise: '#6FFFE9',
+  aquamarine: '#5BC0BE',
+  fontSize: {
+    xxl: '100px',
+    xl: '50px',
+    l: '40px',
+    m: '20px',
+  },
+};
+
+export default theme;

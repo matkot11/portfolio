@@ -14,7 +14,7 @@ import Tweenmax from '../../assets/images/skills/tweenmax.svg';
 import Vue from '../../assets/images/skills/vue.svg';
 
 const StyledWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const StyledSVGWrapper = styled.div`

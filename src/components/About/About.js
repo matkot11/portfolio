@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const StyledTitle = styled.h2`

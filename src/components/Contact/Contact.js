@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
 `;
@@ -13,6 +13,10 @@ const StyledTitle = styled.h2`
   margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.s}) {
+    width: min-content;
+  }
 `;
 
 const StyledForm = styled.form`

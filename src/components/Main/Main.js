@@ -21,11 +21,11 @@ const StyledRole = styled.h1`
   color: ${({ theme }) => theme.aquamarine};
 `;
 
-const MainPage = () => (
+const Main = () => (
   <StyledWrapper>
     <StyledName>Mateusz Kocik</StyledName>
     <StyledRole>Frontend Developer</StyledRole>
   </StyledWrapper>
 );
 
-export default MainPage;
+export default Main;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../components/Container/Container';
+import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
   height: 100vh;
@@ -18,7 +18,7 @@ const StyledParagraph = styled.p`
   max-width: 700px;
 `;
 
-const AboutPage = () => (
+const About = () => (
   <StyledWrapper>
     <Container>
       <StyledTitle>A little bit about me</StyledTitle>
@@ -35,4 +35,4 @@ const AboutPage = () => (
   </StyledWrapper>
 );
 
-export default AboutPage;
+export default About;

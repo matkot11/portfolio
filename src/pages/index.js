@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import AboutPage from './about';
-import MainPage from './main';
-import SkillsPage from './skills';
+import About from '../components/About/About';
+import Main from '../components/Main/Main';
+import Projects from '../components/Projects/Projects';
+import Skills from '../components/Skills/Skills';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -13,9 +14,10 @@ const StyledWrapper = styled.div`
 
 const IndexPage = () => (
   <StyledWrapper>
-    <MainPage />
-    <AboutPage />
-    <SkillsPage />
+    <Main />
+    <About />
+    <Skills />
+    <Projects />
   </StyledWrapper>
 );
 

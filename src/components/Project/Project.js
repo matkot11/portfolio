@@ -1,14 +1,11 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import Container from '../Container/Container';
-import ReactSVG from '../../assets/images/skills/react.svg';
-import Sass from '../../assets/images/skills/sass.svg';
-import Gsap from '../../assets/images/skills/tweenmax.svg';
 
 const StyledWrapper = styled.div`
   display: flex;
-  /* width: 1300px; */
   align-items: center;
 `;
 
@@ -17,13 +14,20 @@ const StyledInnerWrapper = styled.div`
   flex-direction: column;
 `;
 
-const StyledImage = styled.img`
+const StyledImage = styled(Image)`
   border-radius: 5px;
   max-width: 700px;
   margin-right: 20px;
 `;
 
 const StyledTitle = styled.h3`
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  color: ${({ theme }) => theme.aquamarine};
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
+const StyledProjectName = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
 `;
@@ -52,28 +56,57 @@ const StyledLink = styled.a`
   }
 `;
 
-const Project = ({
-  image, title, paragraph, pageLink, githubLink,
-}) => (
-  <Container>
-    <StyledWrapper>
-      <StyledImage src={image} alt="foodey" />
-      <StyledInnerWrapper>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledParagraph>{paragraph}</StyledParagraph>
-        <div>
-          <StyledSVG src={ReactSVG} alt="react" />
-          <StyledSVG src={Sass} alt="sass" />
-          <StyledSVG src={Gsap} alt="gsap" />
-        </div>
-        <>
-          <StyledLink href={pageLink}>Link to page</StyledLink>
-          <StyledLink href={githubLink}>Link to Github</StyledLink>
-        </>
-      </StyledInnerWrapper>
-    </StyledWrapper>
-  </Container>
-);
+const Project = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allDatoCmsProject {
+        nodes {
+          image {
+            fixed(width: 700) {
+              ...GatsbyDatoCmsFixed_tracedSVG
+            }
+          }
+          title
+          paragraph
+          technologies {
+            svg {
+              url
+            }
+          }
+          pageLink
+          githubLink
+        }
+      }
+    }
+  `);
+  return (
+    <>
+      <StyledTitle>My projects</StyledTitle>
+      {data.allDatoCmsProject.nodes.map((item) => (
+        <Container key={item.title}>
+          <StyledWrapper>
+            <a href={item.pageLink}>
+              <StyledImage fixed={item.image.fixed} />
+            </a>
+            <StyledInnerWrapper>
+              <StyledProjectName>{item.title}</StyledProjectName>
+              <StyledParagraph>{item.paragraph}</StyledParagraph>
+              <div>
+                {item.technologies.map((svg) => (
+                  <StyledSVG key={svg.svg.url} src={svg.svg.url} />
+                ))}
+              </div>
+              <>
+                <StyledLink href={item.pageLink}>Link to page</StyledLink>
+                <StyledLink href={item.githubLink}>Link to Github</StyledLink>
+              </>
+            </StyledInnerWrapper>
+          </StyledWrapper>
+        </Container>
+      ))}
+    </>
+  );
+};
 
 // Project.propTypes = {
 

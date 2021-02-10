@@ -7,24 +7,41 @@ import Container from '../Container/Container';
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const StyledInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
+    align-items: center;
+  }
 `;
 
 const StyledImage = styled(Image)`
   border-radius: 5px;
-  max-width: 700px;
-  margin-right: 20px;
+  width: 70rem !important;
+  margin-right: 2rem;
+  object-fit: contain;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
+    margin: 2rem 0 0 0;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
+    max-width: 50rem;
+  }
 `;
 
 const StyledTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 `;
 
 const StyledProjectName = styled.h3`
@@ -33,16 +50,16 @@ const StyledProjectName = styled.h3`
 `;
 
 const StyledParagraph = styled.p`
-  max-width: 400px;
+  max-width: 40rem;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.light};
   color: ${({ theme }) => theme.white};
 `;
 
 const StyledSVG = styled.img`
-  max-width: 70px;
-  max-height: 70px;
-  margin: 10px;
+  max-width: 7rem;
+  max-height: 7rem;
+  margin: 1rem;
 `;
 
 const StyledLink = styled.a`
@@ -50,6 +67,7 @@ const StyledLink = styled.a`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.bold};
   color: ${({ theme }) => theme.aquamarine};
+  width: max-content;
 
   :hover {
     color: ${({ theme }) => theme.red};
@@ -62,8 +80,8 @@ const Projects = () => {
       allDatoCmsProject {
         nodes {
           image {
-            fixed(width: 700) {
-              ...GatsbyDatoCmsFixed_tracedSVG
+            fluid {
+              ...GatsbyDatoCmsFluid_tracedSVG
             }
           }
           title
@@ -86,7 +104,7 @@ const Projects = () => {
         <Container key={item.title}>
           <StyledWrapper>
             <a href={item.pageLink}>
-              <StyledImage fixed={item.image.fixed} />
+              <StyledImage fluid={item.image.fluid} />
             </a>
             <StyledInnerWrapper>
               <StyledProjectName>{item.title}</StyledProjectName>

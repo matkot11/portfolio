@@ -6,6 +6,12 @@ const StyledWrapper = styled.nav`
   width: calc(100vw - 160px);
   position: fixed;
   justify-content: flex-end;
+  z-index: 9999;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+    width: calc(100vw - 20px);
+    justify-content: center;
+  }
 `;
 
 const StyledList = styled.ul`
@@ -19,7 +25,7 @@ const StyledList = styled.ul`
 
 const StyledItem = styled.li`
   color: ${({ theme }) => theme.red};
-  font-size: 35px;
+  font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: ${({ theme }) => theme.bold};
   cursor: pointer;
   margin: 0 10px;

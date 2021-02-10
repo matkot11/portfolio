@@ -7,7 +7,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-  margin: 10px;
+  margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
 `;
@@ -15,7 +15,11 @@ const StyledTitle = styled.h2`
 const StyledParagraph = styled.p`
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.white};
-  max-width: 700px;
+  max-width: 70rem;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.m}) {
+    max-width: 50rem;
+  }
 `;
 
 const About = () => (

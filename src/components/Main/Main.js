@@ -11,6 +11,10 @@ const StyledWrapper = styled.div`
   h1 {
     font-size: ${({ theme }) => theme.fontSize.xxl};
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+    width: min-content;
+  }
 `;
 
 const StyledName = styled.h1`

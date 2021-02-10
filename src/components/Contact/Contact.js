@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-  margin: 10px;
+  margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
 `;
@@ -21,13 +21,13 @@ const StyledForm = styled.form`
   align-items: center;
 
   & > * {
-    margin: 10px 0;
+    margin: 1rem 0;
   }
 `;
 
 const StyledInput = styled.input`
-  width: 450px;
-  height: 50px;
+  min-width: 45rem;
+  height: 5rem;
   font-family: 'Montserrat';
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;
@@ -40,8 +40,8 @@ const StyledInput = styled.input`
 `;
 
 const StyledTextarea = styled.textarea`
-  width: 450px;
-  min-height: 150px;
+  width: 45rem;
+  min-height: 15rem;
   font-family: 'Montserrat';
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;

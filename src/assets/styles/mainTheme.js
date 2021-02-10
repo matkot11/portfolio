@@ -7,11 +7,18 @@ const theme = {
   light: 400,
   bold: 600,
   fontSize: {
-    xxl: '100px',
-    xl: '50px',
-    l: '40px',
-    m: '28px',
-    s: '20px',
+    xxl: '10rem',
+    xl: '5rem',
+    l: '4rem',
+    m: '2.8rem',
+    s: '2rem',
+  },
+  size: {
+    xxl: '77rem',
+    xl: '53.125rem',
+    l: '33.125rem',
+    m: '30rem',
+    s: '21.25rem',
   },
 };
 

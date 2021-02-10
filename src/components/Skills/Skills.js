@@ -16,20 +16,30 @@ import Vue from '../../assets/images/skills/vue.svg';
 const StyledWrapper = styled.div`
   height: 100vh;
 `;
+
+const StyledSVGWrapper = styled.div`
+  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+    display: flex;
+  }
+`;
 const StyledInnerWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   width: max-content;
 
   & > * {
-    width: 85px;
-    height: 85px;
-    margin: 15px 15px;
+    width: 8.5rem;
+    height: 8.5rem;
+    margin: 1.5rem 1.5rem;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+    flex-direction: column;
   }
 `;
 
 const StyledTitle = styled.h2`
-  margin: 10px;
+  margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
 `;
@@ -38,7 +48,7 @@ const Skills = () => (
   <StyledWrapper id="skills">
     <Container>
       <StyledTitle>What I know</StyledTitle>
-      <div>
+      <StyledSVGWrapper>
         <StyledInnerWrapper>
           <img src={Html} alt="html" />
         </StyledInnerWrapper>
@@ -56,7 +66,7 @@ const Skills = () => (
           <img src={Vue} alt="html" />
           <img src={Firebase} alt="html" />
         </StyledInnerWrapper>
-      </div>
+      </StyledSVGWrapper>
     </Container>
   </StyledWrapper>
 );

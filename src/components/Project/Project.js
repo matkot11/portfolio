@@ -24,7 +24,7 @@ const StyledTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 `;
 
 const StyledProjectName = styled.h3`

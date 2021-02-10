@@ -2,14 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.nav`
+  display: flex;
   width: calc(100vw - 160px);
   position: fixed;
+  justify-content: flex-end;
 `;
 
 const StyledList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  background-color: #0b132b;
+  border-radius: 10px;
+  width: max-content;
+  padding: 10px;
 `;
 
 const StyledItem = styled.li`

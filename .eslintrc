@@ -14,6 +14,7 @@
     "airbnb"
   ],
 "rules": {
+  "react/prop-types": 0,
   "quotes": 0,
   "no-useless-escape": 0,
   "react/jsx-filename-extension": [1, { "extensions": [".js"] }]

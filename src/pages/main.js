@@ -10,7 +10,6 @@ const StyledWrapper = styled.div`
 
   h1 {
     font-size: ${({ theme }) => theme.fontSize.xxl};
-    margin: 0;
   }
 `;
 

@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: #0B132B;
   }
 
+  h2, h1 {
+    margin: 0;
+  }
+
   ul {
     padding: 0;
     margin: 0;

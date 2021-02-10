@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Main from '../components/Main/Main';
-import Project from '../components/Project/Project';
+import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
 
 const StyledWrapper = styled.div`
@@ -18,7 +18,7 @@ const IndexPage = () => (
     <Main />
     <About />
     <Skills />
-    <Project />
+    <Projects />
     <Contact />
   </StyledWrapper>
 );

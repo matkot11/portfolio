@@ -56,7 +56,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const Project = () => {
+const Projects = () => {
   const data = useStaticQuery(graphql`
     {
       allDatoCmsProject {
@@ -81,7 +81,7 @@ const Project = () => {
   `);
   return (
     <>
-      <StyledTitle>My projects</StyledTitle>
+      <StyledTitle id="projects">My projects</StyledTitle>
       {data.allDatoCmsProject.nodes.map((item) => (
         <Container key={item.title}>
           <StyledWrapper>
@@ -108,8 +108,4 @@ const Project = () => {
   );
 };
 
-// Project.propTypes = {
-
-// };
-
-export default Project;
+export default Projects;

@@ -24,7 +24,7 @@ const StyledInnerWrapper = styled.div`
   & > * {
     width: 85px;
     height: 85px;
-    margin: 15px 10px;
+    margin: 15px 15px;
   }
 `;
 
@@ -35,7 +35,7 @@ const StyledTitle = styled.h2`
 `;
 
 const Skills = () => (
-  <StyledWrapper>
+  <StyledWrapper id="skills">
     <Container>
       <StyledTitle>What I know</StyledTitle>
       <div>

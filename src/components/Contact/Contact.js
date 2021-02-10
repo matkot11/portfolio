@@ -31,6 +31,7 @@ const StyledInput = styled.input`
   font-family: 'Montserrat';
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;
+  padding: 5px;
 
   :focus {
     outline: none;
@@ -44,6 +45,7 @@ const StyledTextarea = styled.textarea`
   font-family: 'Montserrat';
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;
+  padding: 5px;
 
   :focus {
     outline: none;
@@ -70,7 +72,7 @@ const StyledButton = styled.button`
 `;
 
 const Contact = () => {
-  const [name, getName] = useState('');
+  const [email, getEmail] = useState('');
   const [message, getMessage] = useState('');
   const [buttonName, getButtonName] = useState('Send');
   const [sent, isSent] = useState(false);
@@ -84,7 +86,7 @@ const Contact = () => {
       .send(
         'default_service',
         'template_q6fwykp',
-        { from_name: name, message },
+        { from_name: email, message },
         userKey,
       )
       .then(
@@ -99,17 +101,17 @@ const Contact = () => {
   };
 
   return (
-    <StyledWrapper>
+    <StyledWrapper id="contact">
       <Container>
         {!sent ? (
           <>
             <StyledTitle>Get in touch</StyledTitle>
             <StyledForm onSubmit={handleSubmit}>
               <StyledInput
-                type="text"
-                placeholder="Name"
-                value={name}
-                onChange={(e) => getName(e.target.value)}
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => getEmail(e.target.value)}
                 required
               />
               <StyledTextarea
@@ -123,7 +125,7 @@ const Contact = () => {
           </>
         ) : (
           <>
-            <StyledTitle>Thank you for contact</StyledTitle>
+            <StyledTitle>Thank you for message</StyledTitle>
             <StyledButton onClick={() => isSent(false)}>
               Send message again
             </StyledButton>

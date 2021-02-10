@@ -19,7 +19,7 @@ const StyledParagraph = styled.p`
 `;
 
 const About = () => (
-  <StyledWrapper>
+  <StyledWrapper id="about">
     <Container>
       <StyledTitle>A little bit about me</StyledTitle>
       <StyledParagraph>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
@@ -68,17 +69,68 @@ const StyledButton = styled.button`
   }
 `;
 
-const Contact = () => (
-  <StyledWrapper>
-    <Container>
-      <StyledTitle>Get in touch</StyledTitle>
-      <StyledForm>
-        <StyledInput type="email" placeholder="Email" required />
-        <StyledTextarea placeholder="Message" required />
-        <StyledButton type="submit">Send</StyledButton>
-      </StyledForm>
-    </Container>
-  </StyledWrapper>
-);
+const Contact = () => {
+  const [name, getName] = useState('');
+  const [message, getMessage] = useState('');
+  const [buttonName, getButtonName] = useState('Send');
+  const [sent, isSent] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const userKey = 'user_tPStdyKOw6kyDMiTNeOC';
+    getButtonName('Sending...');
+    emailjs
+      .send(
+        'default_service',
+        'template_q6fwykp',
+        { from_name: name, message },
+        userKey,
+      )
+      .then(
+        () => {
+          getButtonName('Send');
+          isSent(true);
+        },
+        () => {
+          getButtonName("Couldn't send the message");
+        },
+      );
+  };
+
+  return (
+    <StyledWrapper>
+      <Container>
+        {!sent ? (
+          <>
+            <StyledTitle>Get in touch</StyledTitle>
+            <StyledForm onSubmit={handleSubmit}>
+              <StyledInput
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => getName(e.target.value)}
+                required
+              />
+              <StyledTextarea
+                placeholder="Message"
+                value={message}
+                onChange={(e) => getMessage(e.target.value)}
+                required
+              />
+              <StyledButton type="submit">{buttonName}</StyledButton>
+            </StyledForm>
+          </>
+        ) : (
+          <>
+            <StyledTitle>Thank you for contact</StyledTitle>
+            <StyledButton onClick={() => isSent(false)}>
+              Send message again
+            </StyledButton>
+          </>
+        )}
+      </Container>
+    </StyledWrapper>
+  );
+};
 export default Contact;

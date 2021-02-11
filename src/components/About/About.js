@@ -1,7 +1,9 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import styled from 'styled-components';
 import Container from '../Container/Container';
-import FaceImage from '../../assets/images/face.png';
+// import FaceImage from '../../assets/images/face.png';
 import BackgroundImage from '../../assets/images/backgroundCoffee.png';
 
 const StyledWrapper = styled.div`
@@ -37,26 +39,44 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const About = () => (
-  <StyledWrapper id="about">
-    <Container>
-      <StyledInnerWrapper>
-        <div>
-          <StyledTitle>A little bit about me</StyledTitle>
-          <StyledParagraph>
-            I code for as long as I can remember. My journey with coding started
-            with Arduino and when I realised I love coding I have started
-            looking what best fits me and as a result I ended up with Frontend.
-            I am learning that for almost two years and still love it.
-            That&apos;s why I went to England to study computer science in order
-            to further my knowledge in coding. I am currently in my first year
-            and besides my studies I would like to get experience in work.
-          </StyledParagraph>
-        </div>
-        <img src={FaceImage} alt="face" />
-      </StyledInnerWrapper>
-    </Container>
-  </StyledWrapper>
-);
+const StyledImage = styled(Image)`
+  width: 50rem;
+`;
 
+const About = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(name: { eq: "face" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <StyledWrapper id="about">
+      <Container>
+        <StyledInnerWrapper>
+          <div>
+            <StyledTitle>A little bit about me</StyledTitle>
+            <StyledParagraph>
+              I code for as long as I can remember. My journey with coding
+              started with Arduino and when I realised I love coding I have
+              started looking what best fits me and as a result I ended up with
+              Frontend. I am learning that for almost two years and still love
+              it. That&apos;s why I went to England to study computer science in
+              order to further my knowledge in coding. I am currently in my
+              first year and besides my studies I would like to get experience
+              in work.
+            </StyledParagraph>
+          </div>
+          <StyledImage fluid={data.file.childImageSharp.fluid} alt="face" />
+        </StyledInnerWrapper>
+      </Container>
+    </StyledWrapper>
+  );
+};
 export default About;

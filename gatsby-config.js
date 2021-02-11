@@ -14,13 +14,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images/skills`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat\:400,600,700`],
+        fonts: [`Montserrat\:400,600`],
       },
     },
     {

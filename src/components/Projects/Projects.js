@@ -133,7 +133,7 @@ const Projects = () => {
               <StyledRowWrapper>
                 {item.technologies.map((svg) => (
                   <StyledSVGWrapper key={svg.svg.url}>
-                    <StyledSVG src={svg.svg.url} key={svg.svgName} />
+                    <StyledSVG src={svg.svg.url} alt={svg.svgName} />
                     <span>{svg.svgName}</span>
                   </StyledSVGWrapper>
                 ))}

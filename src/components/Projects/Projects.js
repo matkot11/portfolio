@@ -100,7 +100,7 @@ const Projects = () => {
       allDatoCmsProject {
         nodes {
           image {
-            fluid {
+            fluid(maxWidth: 700) {
               ...GatsbyDatoCmsFluid_tracedSVG
             }
           }
@@ -125,7 +125,7 @@ const Projects = () => {
         <Container key={item.title}>
           <StyledWrapper>
             <a href={item.pageLink}>
-              <StyledImage fluid={item.image.fluid} />
+              <StyledImage fluid={item.image.fluid} alt="project" />
             </a>
             <StyledInnerWrapper>
               <StyledProjectName>{item.title}</StyledProjectName>
@@ -133,7 +133,7 @@ const Projects = () => {
               <StyledRowWrapper>
                 {item.technologies.map((svg) => (
                   <StyledSVGWrapper key={svg.svg.url}>
-                    <StyledSVG src={svg.svg.url} />
+                    <StyledSVG src={svg.svg.url} key={svg.svgName} />
                     <span>{svg.svgName}</span>
                   </StyledSVGWrapper>
                 ))}

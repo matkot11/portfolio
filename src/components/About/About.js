@@ -18,17 +18,12 @@ const StyledInnerWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 0 2rem;
-
-  img {
-    opacity: .9;
-  }
 `;
 
 const StyledTitle = styled.h2`
   margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
-  /* background-color: #0b132b; */
 `;
 
 const StyledParagraph = styled.p`

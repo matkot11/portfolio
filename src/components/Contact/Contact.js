@@ -5,7 +5,7 @@ import Container from '../Container/Container';
 import BackgroundImage from '../../assets/images/backgroundPizza.png';
 
 const StyledWrapper = styled.div`
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background-image: url(${BackgroundImage});
@@ -40,6 +40,7 @@ const StyledInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;
   padding: 5px;
+  border: none;
 
   :focus {
     outline: none;
@@ -54,6 +55,7 @@ const StyledTextarea = styled.textarea`
   font-size: ${({ theme }) => theme.fontSize.s};
   border-radius: 5px;
   padding: 5px;
+  border: none;
 
   :focus {
     outline: none;

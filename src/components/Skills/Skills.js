@@ -43,11 +43,15 @@ const StyledSVGWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin-left: 1rem;
+
+    span {
+      font-weight: ${({ theme }) => theme.light};
+    }
   }
 
   img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     margin: 0.5rem;
   }
 
@@ -56,6 +60,7 @@ const StyledSVGWrapper = styled.div`
     color: ${({ theme }) => theme.white};
     width: min-content;
     text-align: center;
+    font-weight: ${({ theme }) => theme.bold};
   }
 `;
 

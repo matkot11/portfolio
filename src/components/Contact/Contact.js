@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 import Container from '../Container/Container';
+import BackgroundImage from '../../assets/images/backgroundPizza.png';
 
 const StyledWrapper = styled.div`
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
+  background-image: url(${BackgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const StyledTitle = styled.h2`

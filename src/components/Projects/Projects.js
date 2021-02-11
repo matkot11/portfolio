@@ -22,6 +22,25 @@ const StyledInnerWrapper = styled.div`
   }
 `;
 
+const StyledRowWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StyledSVGWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+
+  span {
+    font-size: ${({ theme }) => theme.fontSize.s};
+    color: ${({ theme }) => theme.white};
+    width: min-content;
+    text-align: center;
+  }
+`;
+
 const StyledImage = styled(Image)`
   border-radius: 5px;
   width: 70rem !important;
@@ -57,8 +76,8 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledSVG = styled.img`
-  max-width: 7rem;
-  max-height: 7rem;
+  max-width: 4rem;
+  max-height: 4rem;
   margin: 1rem;
 `;
 
@@ -68,6 +87,7 @@ const StyledLink = styled.a`
   font-weight: ${({ theme }) => theme.bold};
   color: ${({ theme }) => theme.aquamarine};
   width: max-content;
+  margin: 1rem;
 
   :hover {
     color: ${({ theme }) => theme.red};
@@ -90,6 +110,7 @@ const Projects = () => {
             svg {
               url
             }
+            svgName
           }
           pageLink
           githubLink
@@ -109,11 +130,14 @@ const Projects = () => {
             <StyledInnerWrapper>
               <StyledProjectName>{item.title}</StyledProjectName>
               <StyledParagraph>{item.paragraph}</StyledParagraph>
-              <div>
+              <StyledRowWrapper>
                 {item.technologies.map((svg) => (
-                  <StyledSVG key={svg.svg.url} src={svg.svg.url} />
+                  <StyledSVGWrapper key={svg.svg.url}>
+                    <StyledSVG src={svg.svg.url} />
+                    <span>{svg.svgName}</span>
+                  </StyledSVGWrapper>
                 ))}
-              </div>
+              </StyledRowWrapper>
               <>
                 <StyledLink href={item.pageLink}>Link to page</StyledLink>
                 <StyledLink href={item.githubLink}>Link to Github</StyledLink>

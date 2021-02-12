@@ -9,7 +9,7 @@ import Redux from '../../assets/images/skills/redux.svg';
 import Sass from '../../assets/images/skills/sass.svg';
 import StyledComponents from '../../assets/images/skills/styled-components.svg';
 import Tweenmax from '../../assets/images/skills/tweenmax.svg';
-import Vue from '../../assets/images/skills/vue.svg';
+import Graphql from '../../assets/images/skills/graphql.png';
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
@@ -44,7 +44,7 @@ const StyledSVGWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 2rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   div {
     display: flex;
@@ -90,7 +90,7 @@ const Skills = () => (
             <img src={Html} alt="html" />
             <span>HTML</span>
           </div>
-          <span>Intermediate</span>
+          <span>Expert</span>
         </StyledSVGWrapper>
       </StyledInnerWrapper>
       <StyledInnerWrapper>
@@ -154,10 +154,10 @@ const Skills = () => (
         </StyledSVGWrapper>
         <StyledSVGWrapper>
           <div>
-            <img src={Vue} alt="vue" />
-            <span>Vue</span>
+            <img src={Graphql} alt="graphql" />
+            <span>Graphql</span>
           </div>
-          <span>Begginer</span>
+          <span>Intermediate</span>
         </StyledSVGWrapper>
       </StyledInnerWrapper>
     </StyledRowWrapper>

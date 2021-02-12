@@ -122,7 +122,7 @@ const Projects = () => {
       <StyledTitle id="projects">My projects</StyledTitle>
       {data.allDatoCmsProject.nodes.map((item) => (
         <StyledWrapper key={item.title}>
-          <a href={item.pageLink}>
+          <a href={item.pageLink} target="_blank">
             <StyledImage fluid={item.image.fluid} alt="project" />
           </a>
           <StyledInnerWrapper>
@@ -137,8 +137,12 @@ const Projects = () => {
               ))}
             </StyledRowWrapper>
             <>
-              <StyledLink href={item.pageLink} target="_blank">Link to page</StyledLink>
-              <StyledLink href={item.githubLink} target="_blank">Link to Github</StyledLink>
+              <StyledLink href={item.pageLink} target="_blank">
+                Link to page
+              </StyledLink>
+              <StyledLink href={item.githubLink} target="_blank">
+                Link to Github
+              </StyledLink>
             </>
           </StyledInnerWrapper>
         </StyledWrapper>

@@ -44,7 +44,7 @@ const StyledSVGWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 2rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   div {
     display: flex;

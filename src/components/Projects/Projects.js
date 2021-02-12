@@ -137,8 +137,8 @@ const Projects = () => {
               ))}
             </StyledRowWrapper>
             <>
-              <StyledLink href={item.pageLink}>Link to page</StyledLink>
-              <StyledLink href={item.githubLink}>Link to Github</StyledLink>
+              <StyledLink href={item.pageLink} target="_blank">Link to page</StyledLink>
+              <StyledLink href={item.githubLink} target="_blank">Link to Github</StyledLink>
             </>
           </StyledInnerWrapper>
         </StyledWrapper>

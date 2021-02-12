@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   min-width: calc(100vw - 160px);
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;

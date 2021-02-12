@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import Container from '../Container/Container';
 
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 10rem;
 
   @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
     flex-direction: column-reverse;
@@ -60,7 +60,6 @@ const StyledTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
   text-align: center;
-  margin-bottom: 1rem;
 `;
 
 const StyledProjectName = styled.h3`
@@ -122,29 +121,27 @@ const Projects = () => {
     <>
       <StyledTitle id="projects">My projects</StyledTitle>
       {data.allDatoCmsProject.nodes.map((item) => (
-        <Container key={item.title}>
-          <StyledWrapper>
-            <a href={item.pageLink}>
-              <StyledImage fluid={item.image.fluid} alt="project" />
-            </a>
-            <StyledInnerWrapper>
-              <StyledProjectName>{item.title}</StyledProjectName>
-              <StyledParagraph>{item.paragraph}</StyledParagraph>
-              <StyledRowWrapper>
-                {item.technologies.map((svg) => (
-                  <StyledSVGWrapper key={svg.svg.url}>
-                    <StyledSVG src={svg.svg.url} alt={svg.svgName} />
-                    <span>{svg.svgName}</span>
-                  </StyledSVGWrapper>
-                ))}
-              </StyledRowWrapper>
-              <>
-                <StyledLink href={item.pageLink}>Link to page</StyledLink>
-                <StyledLink href={item.githubLink}>Link to Github</StyledLink>
-              </>
-            </StyledInnerWrapper>
-          </StyledWrapper>
-        </Container>
+        <StyledWrapper key={item.title}>
+          <a href={item.pageLink}>
+            <StyledImage fluid={item.image.fluid} alt="project" />
+          </a>
+          <StyledInnerWrapper>
+            <StyledProjectName>{item.title}</StyledProjectName>
+            <StyledParagraph>{item.paragraph}</StyledParagraph>
+            <StyledRowWrapper>
+              {item.technologies.map((svg) => (
+                <StyledSVGWrapper key={svg.svg.url}>
+                  <StyledSVG src={svg.svg.url} alt={svg.svgName} />
+                  <span>{svg.svgName}</span>
+                </StyledSVGWrapper>
+              ))}
+            </StyledRowWrapper>
+            <>
+              <StyledLink href={item.pageLink}>Link to page</StyledLink>
+              <StyledLink href={item.githubLink}>Link to Github</StyledLink>
+            </>
+          </StyledInnerWrapper>
+        </StyledWrapper>
       ))}
     </>
   );

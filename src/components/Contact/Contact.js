@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
-import Container from '../Container/Container';
-import BackgroundImage from '../../assets/images/backgroundPizza.png';
+import BackgroundImage from '../../assets/images/backgroundPizza.jpg';
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
+  min-width: calc(100vw - 160px);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+    width: calc(100vw - 2rem);
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
+    background-image: none;
+  }
 `;
 
 const StyledTitle = styled.h2`
+  margin: 1rem;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  color: ${({ theme }) => theme.aquamarine};
+`;
+
+const StyledMessageTitle = styled.h2`
   margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
@@ -112,36 +128,34 @@ const Contact = () => {
 
   return (
     <StyledWrapper id="contact">
-      <Container>
-        {!sent ? (
-          <>
-            <StyledTitle>Get in touch</StyledTitle>
-            <StyledForm onSubmit={handleSubmit}>
-              <StyledInput
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => getEmail(e.target.value)}
-                required
-              />
-              <StyledTextarea
-                placeholder="Message"
-                value={message}
-                onChange={(e) => getMessage(e.target.value)}
-                required
-              />
-              <StyledButton type="submit">{buttonName}</StyledButton>
-            </StyledForm>
-          </>
-        ) : (
-          <>
-            <StyledTitle>Thank you for message</StyledTitle>
-            <StyledButton onClick={() => isSent(false)}>
-              Send message again
-            </StyledButton>
-          </>
-        )}
-      </Container>
+      {!sent ? (
+        <>
+          <StyledTitle>Get in touch</StyledTitle>
+          <StyledForm onSubmit={handleSubmit}>
+            <StyledInput
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => getEmail(e.target.value)}
+              required
+            />
+            <StyledTextarea
+              placeholder="Message"
+              value={message}
+              onChange={(e) => getMessage(e.target.value)}
+              required
+            />
+            <StyledButton type="submit">{buttonName}</StyledButton>
+          </StyledForm>
+        </>
+      ) : (
+        <>
+          <StyledMessageTitle>Thank you for message</StyledMessageTitle>
+          <StyledButton onClick={() => isSent(false)}>
+            Send message again
+          </StyledButton>
+        </>
+      )}
     </StyledWrapper>
   );
 };

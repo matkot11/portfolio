@@ -31,8 +31,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     background-color: #0B132B;
 
-    @media only screen and (max-width: 53.125rem) {
-      padding: 10px 10px 0 10px;
+    @media only screen and (max-width: 62.5rem) {
+      padding: 10px;
     }
   }
 

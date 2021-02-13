@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.xxl};
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
+  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
     width: min-content;
   }
 `;

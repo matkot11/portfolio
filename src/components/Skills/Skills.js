@@ -156,7 +156,7 @@ const Skills = () => (
         <StyledSVGWrapper>
           <div>
             <img src={Graphql} alt="graphql" />
-            <span>Graphql</span>
+            <span>GraphQL</span>
           </div>
           <span>Intermediate</span>
         </StyledSVGWrapper>

@@ -7,7 +7,7 @@ Portfolio page is made in Gatsby. Project info is stored in DatoCMS. Layout is m
 ### Technologies
 * Gatsby
 * DatoCMS
-* Graphql
+* GraphQL
 * Styled Components
 * emailJS
 

@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
     width: calc(100vw - 2rem);
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
+  @media only screen and (max-width: 40rem) {
     background-image: none;
   }
 `;
@@ -28,6 +28,10 @@ const StyledInnerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+
+  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
+    width: 100vw;
+  }
 `;
 
 const StyledTitle = styled.h2`

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import emailjs from 'emailjs-com';
 import BackgroundImage from '../../assets/images/backgroundPizza.jpg';
 
@@ -95,19 +95,28 @@ const StyledButton = styled.button`
   :hover {
     color: ${({ theme }) => theme.aquamarine};
   }
+
+  ${({ disabled }) => disabled && css`
+      color: ${({ theme }) => theme.aquamarine};
+
+      :hover  {
+        color: ${({ theme }) => theme.aquamarine};
+        cursor: default;
+      }
+    `}
 `;
 
 const Contact = () => {
   const [email, getEmail] = useState('');
   const [message, getMessage] = useState('');
-  const [buttonName, getButtonName] = useState('Send');
+  const [buttonData, getButtonData] = useState(false);
   const [sent, isSent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const userKey = 'user_tPStdyKOwe6kyDMiTNeOC';
-    getButtonName('Sending...');
+    getButtonData(true);
     emailjs
       .send(
         'default_service',
@@ -115,15 +124,10 @@ const Contact = () => {
         { from_name: email, message },
         userKey,
       )
-      .then(
-        () => {
-          getButtonName('Send');
-          isSent(true);
-        },
-        () => {
-          getButtonName("Couldn't send the message");
-        },
-      );
+      .then(() => {
+        getButtonData(false);
+        isSent(true);
+      });
   };
 
   return (
@@ -145,7 +149,9 @@ const Contact = () => {
               onChange={(e) => getMessage(e.target.value)}
               required
             />
-            <StyledButton type="submit">{buttonName}</StyledButton>
+            <StyledButton type="submit" disabled={buttonData}>
+              {!buttonData ? 'Send' : 'Sending...'}
+            </StyledButton>
           </StyledForm>
         </>
       ) : (

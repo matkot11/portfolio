@@ -45,22 +45,20 @@ const StyledSVGWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 2rem;
-  justify-content: space-evenly;
+  justify-content: center;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
 
-    span {
-      font-weight: ${({ theme }) => theme.light};
-    }
+  span {
+    font-weight: ${({ theme }) => theme.light};
   }
 
   img {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     margin: 0.5rem;
   }
 
@@ -87,78 +85,48 @@ const Skills = () => (
     <StyledRowWrapper>
       <StyledInnerWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Html} alt="html" />
-            <span>HTML</span>
-          </div>
-          <span>Expert</span>
+          <img src={Html} alt="html" />
+          <span>HTML</span>
         </StyledSVGWrapper>
       </StyledInnerWrapper>
       <StyledInnerWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Css} alt="css" />
-            <span>CSS</span>
-          </div>
-          <span>Expert</span>
+          <img src={Css} alt="css" />
+          <span>CSS</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Sass} alt="sass" />
-            <span>SASS</span>
-          </div>
-          <span>Expert</span>
+          <img src={Sass} alt="sass" />
+          <span>SASS</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={StyledComponents} alt="styled components" />
-            <span>Styled Components</span>
-          </div>
-          <span>Intermediate</span>
+          <img src={StyledComponents} alt="styled components" />
+          <span>Styled Components</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Tweenmax} alt="gsap" />
-            <span>GSAP</span>
-          </div>
-          <span>Begginer</span>
+          <img src={Tweenmax} alt="gsap" />
+          <span>GSAP</span>
         </StyledSVGWrapper>
       </StyledInnerWrapper>
       <StyledInnerWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Javascript} alt="javascript" />
-            <span>Javascript</span>
-          </div>
-          <span>Intermediate</span>
+          <img src={Javascript} alt="javascript" />
+          <span>Javascript</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={ReactSVG} alt="react" />
-            <span>React</span>
-          </div>
-          <span>Intermediate</span>
+          <img src={ReactSVG} alt="react" />
+          <span>React</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Redux} alt="redux" />
-            <span>Redux</span>
-          </div>
-          <span>Beginner</span>
+          <img src={Redux} alt="redux" />
+          <span>Redux</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Gatsby} alt="gatsby" />
-            <span>Gatsby</span>
-          </div>
-          <span>Beginner</span>
+          <img src={Gatsby} alt="gatsby" />
+          <span>Gatsby</span>
         </StyledSVGWrapper>
         <StyledSVGWrapper>
-          <div>
-            <img src={Graphql} alt="graphql" />
-            <span>GraphQL</span>
-          </div>
-          <span>Intermediate</span>
+          <img src={Graphql} alt="graphql" />
+          <span>GraphQL</span>
         </StyledSVGWrapper>
       </StyledInnerWrapper>
     </StyledRowWrapper>

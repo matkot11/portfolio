@@ -10,6 +10,10 @@ const StyledWrapper = styled.div`
 
   h1 {
     font-size: ${({ theme }) => theme.fontSize.xxl};
+
+    @media only screen and (max-width: 17.5rem) {
+      font-size: 8rem;
+    }
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {

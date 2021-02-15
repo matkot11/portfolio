@@ -68,7 +68,6 @@ const StyledSVGWrapper = styled.div`
     width: min-content;
     text-align: center;
     font-weight: ${({ theme }) => theme.bold};
-    margin-left: 1rem;
   }
 `;
 

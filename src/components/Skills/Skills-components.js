@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Css from '../../assets/images/skills/css.svg';
 import Gatsby from '../../assets/images/skills/gatsby.svg';
 import Html from '../../assets/images/skills/html.svg';
@@ -10,73 +9,13 @@ import Sass from '../../assets/images/skills/sass.svg';
 import StyledComponents from '../../assets/images/skills/styled-components.svg';
 import Tweenmax from '../../assets/images/skills/tweenmax.svg';
 import Graphql from '../../assets/images/skills/graphql.png';
-
-const StyledWrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const StyledRowWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: calc(100vw - 16rem);
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
-    flex-direction: column;
-    width: calc(100vw - 2rem);
-  }
-`;
-const StyledInnerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 1.5rem 1.5rem;
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-`;
-
-const StyledSVGWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  justify-content: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 1rem;
-
-  span {
-    font-weight: ${({ theme }) => theme.light};
-  }
-
-  img {
-    width: 5rem;
-    height: 5rem;
-    margin: 0.5rem;
-  }
-
-  span {
-    font-size: ${({ theme }) => theme.fontSize.s};
-    color: ${({ theme }) => theme.white};
-    width: min-content;
-    text-align: center;
-    font-weight: ${({ theme }) => theme.bold};
-  }
-`;
-
-const StyledTitle = styled.h2`
-  margin: 1rem;
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  color: ${({ theme }) => theme.aquamarine};
-  width: max-content;
-`;
+import {
+  StyledWrapper,
+  StyledTitle,
+  StyledRowWrapper,
+  StyledInnerWrapper,
+  StyledSVGWrapper,
+} from './Skills-styles';
 
 const Skills = () => (
   <StyledWrapper id="skills">

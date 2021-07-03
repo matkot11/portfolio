@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import About from '../components/About/About';
+import About from '../components/About/About-component';
 import Contact from '../components/Contact/Contact';
-import Main from '../components/Main/Main';
+import Main from '../components/Main/Main-component';
 import Projects from '../components/Projects/Projects';
-import Skills from '../components/Skills/Skills';
+import Skills from '../components/Skills/Skills-components';
 
 const StyledWrapper = styled.div`
   display: flex;

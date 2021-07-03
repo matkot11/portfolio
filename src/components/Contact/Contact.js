@@ -13,14 +13,6 @@ const StyledWrapper = styled.div`
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xl}) {
-    width: calc(100vw - 2rem);
-  }
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
-    background-image: none;
-  }
 `;
 
 const StyledTitle = styled.h2`
@@ -33,10 +25,6 @@ const StyledMessageTitle = styled.h2`
   margin: 1rem;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.aquamarine};
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.s}) {
-    width: min-content;
-  }
 `;
 
 const StyledForm = styled.form`

@@ -7,19 +7,11 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10rem;
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
-    flex-direction: column-reverse;
-  }
 `;
 
 const StyledInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
-    align-items: center;
-  }
 `;
 
 const StyledRowWrapper = styled.div`
@@ -46,14 +38,6 @@ const StyledImage = styled(Image)`
   width: 70rem !important;
   margin-right: 2rem;
   object-fit: contain;
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.xxl}) {
-    margin: 2rem 0 0 0;
-  }
-
-  @media only screen and (max-width: ${({ theme }) => theme.size.l}) {
-    max-width: 50rem;
-  }
 `;
 
 const StyledTitle = styled.h3`

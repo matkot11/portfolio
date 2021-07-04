@@ -31,6 +31,6 @@ export const StyledTitle = styled.h2`
 export const StyledParagraph = styled.p`
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.white};
-  max-width: 70rem;
+  /* max-width: 70rem; */
   background-color: #0b132b;
 `;

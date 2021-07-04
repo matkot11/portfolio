@@ -3,8 +3,11 @@ import styled from 'styled-components';
 export const StyledWrapper = styled.nav`
   display: flex;
   /* width: calc(100vw - 160px); */
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
   position: fixed;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 9999;
 `;
 

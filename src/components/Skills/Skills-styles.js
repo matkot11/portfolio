@@ -24,7 +24,7 @@ export const StyledInnerWrapper = styled.div`
 export const StyledSVGWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
   justify-content: center;
   display: flex;
   flex-direction: column;

@@ -3,7 +3,6 @@ import BackgroundImage from '../../assets/images/backgroundCoffee.jpg';
 
 export const StyledWrapper = styled.div`
   min-height: 100vh;
-  /* min-width: calc(100vw - 160px); */
   /* background-image: url(${BackgroundImage}); */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */

@@ -14,11 +14,10 @@ const theme = {
     s: '1.8rem',
   },
   size: {
-    // xl: '87.5rem',
     xl: '100rem',
     l: '76.875rem',
     m: '65rem',
-    s: '40.625rem',
+    s: '50.625rem',
   },
 };
 

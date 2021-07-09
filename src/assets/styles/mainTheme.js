@@ -7,17 +7,17 @@ const theme = {
   light: 400,
   bold: 600,
   fontSize: {
-    xxl: '10rem',
+    xxl: '9rem',
     xl: '5rem',
     l: '4rem',
     m: '2.8rem',
     s: '1.8rem',
   },
   size: {
-    xxl: '77rem',
-    xl: '87.5rem',
+    // xl: '87.5rem',
+    xl: '100rem',
     l: '76.875rem',
-    m: '62.5rem',
+    m: '65rem',
     s: '40.625rem',
   },
 };

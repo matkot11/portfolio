@@ -32,6 +32,6 @@ export const StyledRole = styled.h1`
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: 9.2rem;
+    font-size: 8.2rem;
   }
 `;

@@ -29,12 +29,22 @@ export const StyledSVGWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-left: 1rem; */
 
   img {
     width: 3rem;
     height: 3rem;
     margin: 0.5rem;
+
+    @media only screen and (min-width: ${({ theme }) => theme.size.s}) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+      width: 6rem;
+      height: 6rem;
+      margin: 1.5rem;
+    }
   }
 
   span {
@@ -43,13 +53,25 @@ export const StyledSVGWrapper = styled.div`
     width: min-content;
     text-align: center;
     font-weight: ${({ theme }) => theme.bold};
+
+    @media only screen and (min-width: ${({ theme }) => theme.size.s}) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+      font-size: ${({ theme }) => theme.fontSize.s};
+    }
   }
 `;
 
 export const StyledTitle = styled.h2`
-  /* margin: 1rem; */
+  margin-bottom: 3rem;
   font-size: ${({ theme }) => theme.fontSize.l};
   text-align: center;
   color: ${({ theme }) => theme.aquamarine};
   width: max-content;
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
 `;

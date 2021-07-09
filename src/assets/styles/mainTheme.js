@@ -15,10 +15,10 @@ const theme = {
   },
   size: {
     xxl: '77rem',
-    xl: '53.125rem',
-    l: '33.125rem',
-    m: '30rem',
-    s: '21.25rem',
+    xl: '87.5rem',
+    l: '76.875rem',
+    m: '62.5rem',
+    s: '40.625rem',
   },
 };
 

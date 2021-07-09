@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
+    width: 100vw;
   }
 
   *,
@@ -27,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     padding: 0;
+    margin: 0;
+  }
+
+  p {
     margin: 0;
   }
 `;

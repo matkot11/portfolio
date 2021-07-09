@@ -14,15 +14,28 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
-  margin: 1rem;
+  margin-bottom: 3rem;
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.aquamarine};
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
 `;
 
 export const StyledMessageTitle = styled.h2`
   margin: 1rem;
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  text-align: center;
+  font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.aquamarine};
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.xl}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -48,6 +61,14 @@ export const StyledInput = styled.input`
     outline: none;
     border-bottom: solid 3px ${({ theme }) => theme.aquamarine};
   }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.s}) {
+    width: 60vw;
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+    width: 55rem;
+  }
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -62,6 +83,18 @@ export const StyledTextarea = styled.textarea`
   :focus {
     outline: none;
     border-bottom: solid 3px ${({ theme }) => theme.aquamarine};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.s}) {
+    width: 60vw;
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    height: 20rem;
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+    width: 55rem;
   }
 `;
 
@@ -82,7 +115,8 @@ export const StyledButton = styled.button`
     color: ${({ theme }) => theme.aquamarine};
   }
 
-  ${({ disabled }) => disabled && css`
+  ${({ disabled }) => disabled
+    && css`
       color: ${({ theme }) => theme.aquamarine};
 
       :hover {
@@ -90,4 +124,8 @@ export const StyledButton = styled.button`
         cursor: default;
       }
     `}
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.s}) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
 `;

@@ -13,24 +13,35 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledInnerWrapper = styled.div`
-  /* width: calc(100vw - 16rem); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 .5rem;
 `;
 
 export const StyledTitle = styled.h2`
-  margin: 1rem;
+  margin-bottom: 3rem;
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.aquamarine};
   text-align: center;
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
 `;
 
 export const StyledParagraph = styled.p`
+  width: 90vw;
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.white};
-  /* max-width: 70rem; */
   background-color: #0b132b;
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    width: 60vw;
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.xl}) {
+    width: 50vw;
+  }
 `;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin: 5rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;

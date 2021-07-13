@@ -1,16 +1,13 @@
 import styled, { css } from 'styled-components';
-import BackgroundImage from '../../assets/images/backgroundPizza.jpg';
 
 export const StyledWrapper = styled.div`
-  min-height: 100vh;
+  margin: 5rem 0 5rem 0;
+  /* min-height: 100vh; */
   min-width: calc(100vw - 160px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-image: url(${BackgroundImage}); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
 `;
 
 export const StyledTitle = styled.h2`

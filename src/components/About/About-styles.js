@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import BackgroundImage from '../../assets/images/backgroundCoffee.jpg';
 
 export const StyledWrapper = styled.div`
-  min-height: 100vh;
-  /* background-image: url(${BackgroundImage}); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  margin: 5rem 0 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,5 +38,6 @@ export const StyledParagraph = styled.p`
 
   @media only screen and (min-width: ${({ theme }) => theme.size.xl}) {
     width: 50vw;
+    margin-bottom: 10rem;
   }
 `;

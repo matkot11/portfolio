@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
   margin-left: 1rem;
-  align-self: flex-start;
-  height: calc(100vh - 3.2rem);
+  /* height: calc(100vh - 3.2rem); */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: flex-start;
 `;
 
 export const StyledName = styled.h1`

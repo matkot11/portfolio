@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 
 export const StyledWrapper = styled.div`
+  margin: 5rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     flex-direction: row-reverse;
@@ -52,15 +52,15 @@ export const StyledImage = styled(Image)`
   border-radius: 5px;
   width: 90vw;
   object-fit: contain;
+  margin-bottom: 5rem;
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     width: 50vw;
-    margin-bottom: 5rem;
   }
 `;
 
 export const StyledTitle = styled.h3`
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.aquamarine};
   text-align: center;
@@ -84,11 +84,11 @@ export const StyledParagraph = styled.p`
   color: ${({ theme }) => theme.white};
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
-    width: 40vw;
+    width: 30vw;
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
   }
 `;
 

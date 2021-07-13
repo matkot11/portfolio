@@ -1,15 +1,15 @@
 import React from 'react';
+import Title from '../Title/Title-styles';
 import {
   StyledWrapper,
   StyledInnerWrapper,
-  StyledTitle,
   StyledParagraph,
 } from './About-styles';
 
 const About = () => (
   <StyledWrapper id="about">
     <StyledInnerWrapper>
-      <StyledTitle>A little bit about me</StyledTitle>
+      <Title>A little bit about me</Title>
       <StyledParagraph>
         I code for as long as I can remember. My journey with coding started
         with Arduino and when I realised I love coding I have started looking

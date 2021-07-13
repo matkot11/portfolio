@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Image from 'gatsby-image';
+import Title from '../Title/Title-styles';
 
 export const StyledWrapper = styled.div`
   margin: 5rem 0 5rem 0;
@@ -59,15 +60,8 @@ export const StyledImage = styled(Image)`
   }
 `;
 
-export const StyledTitle = styled.h3`
+export const StyledTitle = styled(Title)`
   margin-bottom: 6rem;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  color: ${({ theme }) => theme.aquamarine};
-  text-align: center;
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: ${({ theme }) => theme.fontSize.xl};
-  }
 `;
 
 export const StyledProjectName = styled.h3`

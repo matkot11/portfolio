@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
   margin-left: 1rem;
-  /* height: calc(100vh - 3.2rem); */
   height: 100vh;
   display: flex;
   flex-direction: column;

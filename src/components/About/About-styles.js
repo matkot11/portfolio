@@ -14,22 +14,12 @@ export const StyledInnerWrapper = styled.div`
   align-items: center;
 `;
 
-export const StyledTitle = styled.h2`
-  margin-bottom: 3rem;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  color: ${({ theme }) => theme.aquamarine};
-  text-align: center;
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: ${({ theme }) => theme.fontSize.xl};
-  }
-`;
-
 export const StyledParagraph = styled.p`
   width: 90vw;
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.white};
   background-color: #0b132b;
+  margin-bottom: 10rem;
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     width: 60vw;
@@ -38,6 +28,5 @@ export const StyledParagraph = styled.p`
 
   @media only screen and (min-width: ${({ theme }) => theme.size.xl}) {
     width: 50vw;
-    margin-bottom: 10rem;
   }
 `;

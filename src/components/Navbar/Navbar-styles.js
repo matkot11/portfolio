@@ -38,8 +38,4 @@ export const StyledItem = styled.li`
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     font-size: 2.2rem;
   }
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
-    font-size: ${({ theme }) => theme.fontSize.m};
-  }
 `;

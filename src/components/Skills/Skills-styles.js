@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
-  /* min-height: 100vh; */
   margin: 5rem 0 5rem 0;
   display: flex;
   flex-direction: column;
@@ -62,17 +61,5 @@ export const StyledSVGWrapper = styled.div`
     @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
       font-size: ${({ theme }) => theme.fontSize.s};
     }
-  }
-`;
-
-export const StyledTitle = styled.h2`
-  margin-bottom: 3rem;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  text-align: center;
-  color: ${({ theme }) => theme.aquamarine};
-  width: max-content;
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: ${({ theme }) => theme.fontSize.xl};
   }
 `;

@@ -2,22 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.div`
   margin: 5rem 0 5rem 0;
-  /* min-height: 100vh; */
-  min-width: calc(100vw - 160px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const StyledTitle = styled.h2`
-  margin-bottom: 3rem;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  color: ${({ theme }) => theme.aquamarine};
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.l}) {
-    font-size: ${({ theme }) => theme.fontSize.xl};
-  }
 `;
 
 export const StyledMessageTitle = styled.h2`

@@ -9,9 +9,9 @@ import Sass from '../../assets/images/skills/sass.svg';
 import StyledComponents from '../../assets/images/skills/styled-components.svg';
 import Tweenmax from '../../assets/images/skills/tweenmax.svg';
 import Graphql from '../../assets/images/skills/graphql.png';
+import Title from '../Title/Title-styles';
 import {
   StyledWrapper,
-  StyledTitle,
   StyledRowWrapper,
   StyledInnerWrapper,
   StyledSVGWrapper,
@@ -19,7 +19,7 @@ import {
 
 const Skills = () => (
   <StyledWrapper id="skills">
-    <StyledTitle>What I know</StyledTitle>
+    <Title>What I know</Title>
     <StyledRowWrapper>
       <StyledInnerWrapper>
         <StyledSVGWrapper>

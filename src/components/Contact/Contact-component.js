@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import Title from '../Title/Title-styles';
 import {
   StyledButton,
   StyledForm,
   StyledInput,
   StyledMessageTitle,
   StyledTextarea,
-  StyledTitle,
   StyledWrapper,
 } from './Contact-styles';
 
@@ -38,7 +38,7 @@ const Contact = () => {
     <StyledWrapper id="contact">
       {!sent ? (
         <>
-          <StyledTitle>Get in touch</StyledTitle>
+          <Title>Get in touch</Title>
           <StyledForm onSubmit={handleSubmit}>
             <StyledInput
               type="email"

@@ -2,12 +2,17 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.nav`
   display: flex;
-  margin-top: 2rem;
+  padding-top: 2rem;
   width: 100%;
   text-align: center;
   position: fixed;
   justify-content: center;
   z-index: 9999;
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
 `;
 
 export const StyledList = styled.ul`
@@ -33,6 +38,10 @@ export const StyledItem = styled.li`
 
   :hover {
     color: ${({ theme }) => theme.aquamarine};
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    font-size: 2rem;
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {

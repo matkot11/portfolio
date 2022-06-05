@@ -8,20 +8,17 @@ export const StyledWrapper = styled.nav`
   position: fixed;
   justify-content: center;
   z-index: 9999;
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
 `;
 
 export const StyledList = styled.ul`
   list-style: none;
   display: flex;
   background-color: #0b132b;
-  justify-content: center;
-  width: 100%;
-  padding: 0.5rem;
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
-    justify-content: flex-end;
-    padding-right: 2rem;
-  }
 `;
 
 export const StyledItem = styled.li`
@@ -41,14 +38,15 @@ export const StyledItem = styled.li`
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
-    font-size: 2rem;
-  }
-
-  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     font-size: 2.2rem;
   }
 `;
 
 export const StyledImage = styled.img`
   height: 100%;
+  width: ${({ theme }) => theme.fontSize.s};
+
+  @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    width: 2.2rem;
+  }
 `;

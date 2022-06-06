@@ -15,11 +15,12 @@ export const StyledInnerWrapper = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
+  margin-bottom: 10rem;
   width: 90vw;
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.white};
+  text-align: center;
   background-color: #0b132b;
-  margin-bottom: 10rem;
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     width: 60vw;

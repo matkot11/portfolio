@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.nav`
-  display: flex;
   padding-top: 2rem;
   width: 100%;
+  display: flex;
   text-align: center;
   position: fixed;
   justify-content: center;
@@ -19,6 +19,7 @@ export const StyledList = styled.ul`
   list-style: none;
   display: flex;
   background-color: #0b132b;
+  border-radius: 5px;
 `;
 
 export const StyledItem = styled.li`
@@ -26,7 +27,7 @@ export const StyledItem = styled.li`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.bold};
   cursor: pointer;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
 
   a {
     text-decoration: none;
@@ -42,9 +43,14 @@ export const StyledItem = styled.li`
   }
 `;
 
-export const StyledImage = styled.img`
+export const StyledSvg = styled.svg`
   height: 100%;
   width: ${({ theme }) => theme.fontSize.s};
+  fill: ${({ theme }) => theme.red};
+
+  :hover {
+    fill: ${({ theme }) => theme.aquamarine};
+  }
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
     width: 2.2rem;

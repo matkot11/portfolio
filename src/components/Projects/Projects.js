@@ -32,10 +32,10 @@ const Projects = () => {
             </StyledRowWrapper>
             <>
               <StyledLink href={item.pageLink} target="_blank" rel="noreferrer">
-                Link to page
+                Visit page
               </StyledLink>
               <StyledLink href={item.githubLink} target="_blank" rel="noreferrer">
-                Link to Github
+                Check out code
               </StyledLink>
             </>
           </StyledInnerWrapper>

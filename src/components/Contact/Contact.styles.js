@@ -87,7 +87,7 @@ export const StyledButton = styled.button`
   border: none;
   width: max-content;
   background-color: inherit;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: 2.3rem;
   font-weight: ${({ theme }) => theme.bold};
   color: ${({ theme }) => theme.red};
   cursor: pointer;

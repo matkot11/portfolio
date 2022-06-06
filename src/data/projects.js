@@ -18,14 +18,8 @@ export const projects = [
     id: 1,
     image: SociafyImage,
     title: 'Sociafy',
-    // paragraph:
-    //   'Sociafy is a social media app.  User is able to authorise with NextAuth. App provides
-    // functionality such as adding friends, creating posts and events.All data is stored in
-    // MongoDB.Saving images is handled by Cloudinary, service which stores images.In order
-    // toimplement design atomic design method was used as well as Storybook and Styled
-    // Components.',
     paragraph:
-      'Writing website thought me about connecting backend to frontend, how to store data in database and how to implement properly authentication. I have also found out how powerful NextJS is. Main obstacle was implementing backend as it was first time, I did that. Next step would be implementing chat functionality.',
+      'Writing website thought me about connecting backend to frontend, how to store data in database and how to implement properly authentication. I have also found out how powerful NextJS is. Main obstacle was implementing backend as it was first time I have ever done this. Next step would be implementing chat functionality.',
     technologies: [
       {
         id: 1.1,
@@ -60,11 +54,6 @@ export const projects = [
     id: 2,
     image: BrandlyImage,
     title: 'Brandly',
-    // paragraph:
-    //   'Brandly is a fake store page. It is made in React. Website use FakeStoreAPI to get
-    // products. Authorisation and saving items in cart are made with Firebase. Messages are
-    // handled with Redux. In order to implement design atomic design method was used as well
-    // as Storybook and Styled Components.',
     paragraph:
       'Creating online store thought me how to create rest API calls to fetch products and use Firebase, which was used to implement simple authentication and store cart data. Redux was implemented to keep track of displayed messages. Main obstacle was implementing atomic design. At first, I was not sure to which folders put components, but after the while I figured it out. I am sure it is the best way to implement interfaces. Next step would be adding real payments, but to make that happen I would have to make backend.',
     technologies: [

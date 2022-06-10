@@ -9,22 +9,17 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledRowWrapper = styled.div`
+  padding: 5rem 3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-`;
-export const StyledInnerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0.5rem 0.5rem;
 `;
 
 export const StyledSVGWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 2rem;
   justify-content: center;
   flex-direction: column;
 

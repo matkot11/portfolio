@@ -60,7 +60,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled(Title)`
-  margin-bottom: 6rem;
+  margin: 5rem 0;
 `;
 
 export const StyledProjectName = styled.h3`

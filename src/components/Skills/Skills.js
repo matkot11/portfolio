@@ -8,60 +8,54 @@ import Redux from '../../assets/images/skills/redux.svg';
 import Sass from '../../assets/images/skills/sass.svg';
 import StyledComponents from '../../assets/images/skills/styled-components.svg';
 import Tweenmax from '../../assets/images/skills/tweenmax.svg';
+import Jest from '../../assets/images/skills/jest.png';
 import Title from '../Title/Title';
-import {
-  StyledWrapper,
-  StyledRowWrapper,
-  StyledInnerWrapper,
-  StyledSVGWrapper
-} from './Skills.styles';
+import { StyledWrapper, StyledRowWrapper, StyledSVGWrapper } from './Skills.styles';
 
 const Skills = () => (
   <StyledWrapper id="skills">
     <Title>What I know</Title>
     <StyledRowWrapper>
-      <StyledInnerWrapper>
-        <StyledSVGWrapper>
-          <img src={Html} alt="html" />
-          <span>HTML</span>
-        </StyledSVGWrapper>
-      </StyledInnerWrapper>
-      <StyledInnerWrapper>
-        <StyledSVGWrapper>
-          <img src={Css} alt="css" />
-          <span>CSS</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={Sass} alt="sass" />
-          <span>SASS</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={StyledComponents} alt="styled components" />
-          <span>Styled Components</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={Tweenmax} alt="gsap" />
-          <span>GSAP</span>
-        </StyledSVGWrapper>
-      </StyledInnerWrapper>
-      <StyledInnerWrapper>
-        <StyledSVGWrapper>
-          <img src={Javascript} alt="javascript" />
-          <span>Javascript</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={ReactSVG} alt="react" />
-          <span>React</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={Redux} alt="redux" />
-          <span>Redux</span>
-        </StyledSVGWrapper>
-        <StyledSVGWrapper>
-          <img src={Nextjs} alt="nextjs" />
-          <span>Next.js</span>
-        </StyledSVGWrapper>
-      </StyledInnerWrapper>
+      <StyledSVGWrapper>
+        <img src={Html} alt="html" />
+        <span>HTML</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Css} alt="css" />
+        <span>CSS</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Sass} alt="sass" />
+        <span>SASS</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={StyledComponents} alt="styled components" />
+        <span>Styled Components</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Tweenmax} alt="gsap" />
+        <span>GSAP</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Javascript} alt="javascript" />
+        <span>Javascript</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Jest} alt="jest" />
+        <span>Jest</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={ReactSVG} alt="react" />
+        <span>React</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Redux} alt="redux" />
+        <span>Redux</span>
+      </StyledSVGWrapper>
+      <StyledSVGWrapper>
+        <img src={Nextjs} alt="nextjs" />
+        <span>Next.js</span>
+      </StyledSVGWrapper>
     </StyledRowWrapper>
   </StyledWrapper>
 );

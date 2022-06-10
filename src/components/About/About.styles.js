@@ -15,7 +15,8 @@ export const StyledInnerWrapper = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
-  margin-bottom: 10rem;
+  //margin-bottom: 10rem;
+  padding: 5rem 3rem;
   width: 90vw;
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.white};

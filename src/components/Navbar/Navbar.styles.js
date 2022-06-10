@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.nav`
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: 100%;
   display: flex;
   text-align: center;
@@ -10,8 +10,8 @@ export const StyledWrapper = styled.nav`
   z-index: 9999;
 
   @media only screen and (min-width: ${({ theme }) => theme.size.m}) {
+    padding: 2rem 2rem 0 0;
     justify-content: flex-end;
-    padding-right: 2rem;
   }
 `;
 

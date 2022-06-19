@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Title from '../Title/Title';
 
 export const StyledWrapper = styled.div`
-  padding: 5rem 0 5rem 0;
+  padding: 3rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled(Title)`
-  margin: 5rem 0;
+  margin: 1rem 0;
 `;
 
 export const StyledProjectName = styled.h3`

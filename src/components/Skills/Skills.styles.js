@@ -9,7 +9,7 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledRowWrapper = styled.div`
-  padding: 5rem 3rem;
+  padding: 2rem 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -10,7 +10,7 @@ const About = () => (
         Third year Computer Science student at De Montfort University and self-thought Frontend
         Developer specialized in React. In the free time I love trying out new technologies.
         Currently I am creating app in React Native. Besides of coding I am huge fan of soulslike
-        game genre and cooking dished from all over the world cuisines.
+        game genre and cooking dishes from all over the world cuisines.
       </StyledParagraph>
     </StyledInnerWrapper>
   </StyledWrapper>

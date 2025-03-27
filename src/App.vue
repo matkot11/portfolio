@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import AboutSection from '@/sections/about/AboutSection.vue'
+</script>
+
 <template>
-  <main>
-    <h1>Hello World</h1>
+  <main class="app">
+    <AboutSection />
   </main>
 </template>

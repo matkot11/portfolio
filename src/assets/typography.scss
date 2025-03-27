@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+%kumbh-sans-medium {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'YOPQ' 300;
+}
+
+%kumbh-sans-semi-bold {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: 'YOPQ' 300;
+}
+
+%kumbh-sans-extra-bold {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: 'YOPQ' 300;
+}

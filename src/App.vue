@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import AboutSection from '@/sections/about/AboutSection.vue'
 import NavigationBar from '@/components/NavigationBar.vue'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onBeforeMount, onMounted, onUnmounted, ref } from 'vue'
 import ExperienceSection from './sections/about/experience/ExperienceSection.vue'
+import ProjectsSection from './sections/projects/ProjectsSection.vue'
 
-const currentSection = ref('')
+const currentSectionScrolledMiddle = ref('')
+const currentSectionScrolledTop = ref('')
 
-const checkSection = () => {
+const checkIfSectionIsScrolledToMiddle = () => {
   const sections = document.querySelectorAll('section[id]')
 
   sections.forEach((section) => {
@@ -14,26 +16,52 @@ const checkSection = () => {
     const middle = window.innerHeight / 2
 
     if (rect.top <= middle && rect.bottom >= middle) {
-      currentSection.value = section.id
+      currentSectionScrolledMiddle.value = section.id
     }
   })
 }
 
+const checkIfSectionIsScrolledToTop = () => {
+  const sections = document.querySelectorAll('section[id]')
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect()
+    const distanceFromTopPageToNavigationBar = window.innerHeight >= 768 ? 47 : 25
+
+    if (rect.top <= distanceFromTopPageToNavigationBar) {
+      currentSectionScrolledTop.value = section.id
+    }
+  })
+}
+
+onBeforeMount(() => {
+  window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0)
+  })
+})
+
 onMounted(() => {
-  window.addEventListener('scroll', checkSection)
-  checkSection() // Initial check
+  window.addEventListener('scroll', checkIfSectionIsScrolledToMiddle)
+  window.addEventListener('scroll', checkIfSectionIsScrolledToTop)
+  checkIfSectionIsScrolledToMiddle() // Initial check
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', checkSection)
+  window.removeEventListener('scroll', checkIfSectionIsScrolledToMiddle)
+  window.removeEventListener('scroll', checkIfSectionIsScrolledToTop)
 })
 </script>
 
 <template>
   <main class="app">
-    <NavigationBar :current-section="currentSection" class="app__navigation" />
+    <NavigationBar
+      :current-section="currentSectionScrolledMiddle"
+      :reverted-colors="currentSectionScrolledTop === 'projects'"
+      class="app__navigation"
+    />
     <AboutSection id="about" />
-    <ExperienceSection id="experience" :scrolled-to-section="currentSection === 'experience'" />
+    <ExperienceSection id="experience" :scrolled-to-section="currentSectionScrolledMiddle === 'experience'" />
+    <ProjectsSection id="projects" />
   </main>
 </template>
 

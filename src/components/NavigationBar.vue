@@ -5,6 +5,7 @@ import { onMounted } from 'vue'
 
 defineProps<{
   currentSection: string
+  revertedColors: boolean
 }>()
 
 onMounted(() => {
@@ -27,7 +28,7 @@ const handleScroll = (className: string) => {
 </script>
 
 <template>
-  <nav class="navigation-bar">
+  <nav :class="{ 'navigation-bar': true, 'navigation-bar--reverted-colors': revertedColors }">
     <ul class="navigation-bar__list">
       <li
         v-for="section in ['about', 'experience', 'projects']"
@@ -131,6 +132,31 @@ const handleScroll = (className: string) => {
 
     @media only screen and (min-width: 768px) {
       display: block;
+    }
+  }
+
+  $root: &;
+
+  &--reverted-colors {
+    #{$root}__list {
+      background-color: var(--color-blue);
+    }
+
+    #{$root}__link {
+      color: var(--color-white);
+
+      &:hover,
+      &--active {
+        text-decoration-color: var(--color-white);
+      }
+
+      &-icon:hover {
+        color: var(--color-white);
+      }
+    }
+
+    #{$root}__separator {
+      border-color: var(--color-white);
     }
   }
 }

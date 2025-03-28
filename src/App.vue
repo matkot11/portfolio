@@ -2,6 +2,7 @@
 import AboutSection from '@/sections/about/AboutSection.vue'
 import NavigationBar from '@/components/NavigationBar.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
+import ExperienceSection from './sections/about/experience/ExperienceSection.vue'
 
 const currentSection = ref('')
 
@@ -32,6 +33,7 @@ onUnmounted(() => {
   <main class="app">
     <NavigationBar :current-section="currentSection" class="app__navigation" />
     <AboutSection id="about" />
+    <ExperienceSection id="experience" :scrolled-to-section="currentSection === 'experience'" />
   </main>
 </template>
 

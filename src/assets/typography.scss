@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
+%kumbh-sans-regular {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'YOPQ' 300;
+}
+
 %kumbh-sans-medium {
   font-family: 'Kumbh Sans', sans-serif;
   font-optical-sizing: auto;

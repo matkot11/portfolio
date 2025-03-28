@@ -33,6 +33,7 @@ const isOpen = ref<Record<string, boolean>>({
 
 .projects-section {
   min-height: 100vh;
+  padding-bottom: 50px;
   background-color: var(--color-blue);
   display: flex;
   flex-direction: column;

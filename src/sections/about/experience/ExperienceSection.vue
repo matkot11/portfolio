@@ -56,7 +56,7 @@ watch(
     <hr class="experience-section__separator--mobile" />
 
     <div class="experience-section__job-title-wrapper">
-      <h3 class="experience-section__job-title">Infermedica - Frontend Developer</h3>
+      <h3 class="experience-section__job-title">Infermedica - Fullstack Developer</h3>
       <p class="experience-section__job-title-date">October 2022 - Present</p>
     </div>
 

@@ -4,6 +4,7 @@ export const InfermedicaResponsibilities = [
   'Integrated RESTful APIs into the frontend architecture.',
   'Utilized SCSS and Element Plus for application styles.',
   'Implemented state management in large-scale applications using Vuex and Pinia.',
+  'Contributed to API architecture development in Python and Django.',
   'Tracked Sentry records.',
   'Implemented new frontend standards such as Pinia, TypeScript and Storybook.',
   'Run agile meetings such as retrospective, planning, review and refinements.',
@@ -14,6 +15,22 @@ export const InfermedicaResponsibilities = [
 ]
 
 export const InfermedicaTechStack = [
+  {
+    name: 'Python',
+    docs: 'https://www.python.org/',
+  },
+  {
+    name: 'Django',
+    docs: 'https://www.djangoproject.com/',
+  },
+  {
+    name: 'PostgreSQL',
+    docs: 'https://www.postgresql.org/',
+  },
+  {
+    name: 'Pytest',
+    docs: 'https://docs.pytest.org/en/latest/',
+  },
   {
     name: 'TypeScript',
     docs: 'https://www.typescriptlang.org/docs/',

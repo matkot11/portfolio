@@ -91,7 +91,7 @@ const hideAbout = () => {
     >
       <p class="about-section__about-text">
         Software developer with 3 years of experience specializing in building data-driven web
-        applications using Vue.js. Currently working at Infermedica, contributing to the development
+        applications. Currently working at Infermedica, contributing to the development
         of a medical application for doctors, focused on eﬃciently handling large volumes of medical
         data. In my free time, I enjoy climbing, especially bouldering, and playing board games.
       </p>
